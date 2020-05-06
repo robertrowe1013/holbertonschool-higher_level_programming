@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
+    if not list:
+        return None
     rev_list = my_list[::-1]
     i = 0
     while i < len(rev_list):
