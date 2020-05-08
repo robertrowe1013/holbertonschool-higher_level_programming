@@ -5,7 +5,7 @@ def roman_to_int(roman_string):
     roman_sum = 0
     if type(roman_string) is str:
         for n in roman_string:        
-            if roman_num[n] is > prev:
+            if roman_num[n] > prev:
                 roman_sum -= prev
             else:
                 roman_sum += prev
