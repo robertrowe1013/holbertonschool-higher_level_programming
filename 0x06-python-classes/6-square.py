@@ -8,15 +8,12 @@ class Square:
     """A plane figure with four equal length sides and four right angles.
 
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """length of size.
 
         """
         self.__size = size
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
+        self.position = position
 
     @property
     def size(self):
@@ -30,6 +27,18 @@ class Square:
         if value < 0:
             raise ValueError('size must be >= 0')
 
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        self.__position = value
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
     def area(self):
         return (self.__size ** 2)
 
@@ -37,7 +46,8 @@ class Square:
         if self.size == 0:
             print("")
         else:
+            print("" * self.position[0])
             for i in range(self.size):
-                for i2 in range(self.size):
-                    print("#", end='')
+                print(" " * self.position[1], end='')
+                print("#" * self.size, end='')
                 print("")
