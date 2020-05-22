@@ -55,3 +55,19 @@ class Square:
                 print(" " * self.position[0], end='')
                 print("#" * self.size, end='')
                 print("")
+
+    def __str__(self):
+        sq = ""
+        if self.size == 0:
+            return sq
+        else:
+            for pos in range(self.position[1]):
+                sq += "\n"
+            for i in range(self.size):
+                for i2 in range(self.position[0]):
+                    sq += " "
+                for i3 in range(self.size):
+                    sq += "#"
+                if i + 1 != self.size:
+                    sq += "\n"
+        return sq
