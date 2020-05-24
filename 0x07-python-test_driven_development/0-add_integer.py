@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""add int
+
+"""
+
+
 def add_integer(a, b=98):
+    """add int
+
+    """
     try:
         a += 0
     except TypeError:
