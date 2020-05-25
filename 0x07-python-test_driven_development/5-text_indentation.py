@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""text conversion"""
+
+
 def text_indentation(text):
+    """text conversion"""
     if type(text) != str:
         raise TypeError("text must be a string")
     new_text = text.replace(". ", ".\n\n")
