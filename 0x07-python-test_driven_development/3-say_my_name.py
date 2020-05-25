@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """print name"""
 
+
 def say_my_name(first_name, last_name=""):
     """print name"""
     if type(first_name) != str:
