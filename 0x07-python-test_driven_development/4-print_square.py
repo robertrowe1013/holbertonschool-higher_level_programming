@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""print square"""
+
+
 def print_square(size):
+    """print square"""
     try:
         size += 0
     except TypeError:
