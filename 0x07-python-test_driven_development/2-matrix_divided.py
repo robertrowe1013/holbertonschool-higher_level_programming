@@ -4,15 +4,17 @@
 
 def matrix_divided(matrix, div):
     """divide a matrix"""
-    new_matrix = matrix.copy()
-    for row in range(len(new_matrix) - 1):
-        if len(new_matrix[row]) != len(new_matrix[row + 1]):
+    if type(div) != int and type(div) != float:
+        raise TypeError("div must be a number")
+    for row in range(len(matrix) - 1):
+        if len(matrix[row]) != len(matrix[row + 1]):
                 raise TypeError("Each row of the matrix "
                                 "must have the same size")
-    for i in range(len(new_matrix)):
-        for i2 in range(len(new_matrix[i])):
+    new_matrix = []
+    for row in matrix:
+        for i in row:
             try:
-                new_matrix[i][i2] = round((new_matrix[i][i2] / div), 2)
+                new_matrix.append([round(i / div, 2)])
             except ZeroDivisionError:
                 raise ZeroDivisionError("division by zero")
             except TypeError:
