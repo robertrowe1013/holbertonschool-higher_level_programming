@@ -5,7 +5,7 @@
 import unittest
 max_int = __import__('6-max_integer').max_integer
 
-class Test6(unittest.TestCase)
+class Test6(unittest.TestCase):
     """test task 6"""
 
     def test_max(self):
