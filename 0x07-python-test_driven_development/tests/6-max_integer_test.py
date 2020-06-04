@@ -15,3 +15,4 @@ class Test6(unittest.TestCase):
         self.assertEqual(max_int([-1, 2]), 2)
         self.assertEqual(max_int([-1, -2]), -1)
         self.assertEqual(max_int([2]), 2)
+        self.assertEqual(max_int([]), None)
