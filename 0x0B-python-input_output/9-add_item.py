@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """load add save"""
-
-
 import json
 import sys
 save = __import__("7-save_to_json_file").save_to_json_file
@@ -12,4 +10,4 @@ except:
     arg_list = []
 for i in range(1, len(sys.argv)):
     arg_list.append(sys.agrv[i])
-save(arg_list, add_item.json)
+save(arg_list, "add_item.json")
