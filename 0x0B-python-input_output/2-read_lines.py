@@ -10,4 +10,4 @@ def read_lines(filename="", nb_lines=0):
         elif nb_lines > len(my_file.readlines()):
             print(my_file.read())
         else:
-            
+`           return            
