@@ -18,8 +18,9 @@ def matrix_divided(matrix, div):
         new_matrix.append(row)
         for i in row:
             try:
-                new_matrix = list(map(lambda row: list(map(lambda n: 
-                                    round(n/div, 2), row)), matrix))
+                new_matrix = list(map(lambda row:
+                                      list(map(lambda n:
+                                               round(n/div, 2), row)), matrix))
             except ZeroDivisionError:
                 raise ZeroDivisionError("division by zero")
             except TypeError:
