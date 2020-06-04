@@ -9,5 +9,5 @@ try:
 except:
     arg_list = []
 for i in range(1, len(sys.argv)):
-    arg_list.append(sys.agrv[i])
+    arg_list.append(sys.argv[i])
 save(arg_list, "add_item.json")
