@@ -12,9 +12,13 @@ def matrix_divided(matrix, div):
                                 "must have the same size")
     new_matrix = []
     for row in matrix:
+        if type(row) != list:
+            raise TypeError("matrix must be a matrix (list of lists) "
+                            "of integers/floats")
+        new_matrix.append(row)
         for i in row:
             try:
-                new_matrix.append([round(i / div, 2)])
+                new_matrix = list(map(lambda row: list(map(lambda n: round(n/div, 2), row)), matrix))
             except ZeroDivisionError:
                 raise ZeroDivisionError("division by zero")
             except TypeError:
