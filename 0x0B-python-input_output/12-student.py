@@ -18,6 +18,7 @@ class Student:
         else:
             attr_dict = {}
             for key in self.__dict__:
-                if key in attrs:
+                for key2 in attrs:
+                    if key == key2:
                         attr_dict[key] = self.__dict__[key]
                 return attr_dict
