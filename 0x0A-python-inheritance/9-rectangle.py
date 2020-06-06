@@ -18,4 +18,4 @@ class Rectangle(BaseGeometry):
 
     def __repr__(self):
         """print format"""
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+        return "[{:s}] {:d}/{:d}".format(self.__class__.__name__, self.__width, self.__height)
