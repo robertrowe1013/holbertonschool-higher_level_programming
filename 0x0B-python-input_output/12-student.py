@@ -13,12 +13,13 @@ class Student:
 
     def to_json(self, attrs=None):
         """class to json"""
-        if type(attrs) != list or attrs is None:
+        attr_dict = {}
+        if attrs is None:
+            return self.__dict__
+        elif type(attrs) is not list:
             return self.__dict__
         else:
-            attr_dict = {}
             for key in self.__dict__:
-                for key2 in attrs:
-                    if key == key2:
-                        attr_dict[key] = self.__dict__[key]
+                if key in attrs:
+                    attr_dict[key] = self.__dict__[key]
                 return attr_dict
