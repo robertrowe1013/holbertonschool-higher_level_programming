@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """base class"""
+import json
 
 
 class Base:
@@ -28,3 +29,7 @@ class Base:
         """greater than or equal to error"""
         if value < 0:
             raise ValueError("{:s} must be >= 0".format(name))
+
+    def to_json_string(list_dictionaries):
+        """dict to JSON"""
+        return json.dumps(list_dictionaries)
