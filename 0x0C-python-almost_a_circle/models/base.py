@@ -30,6 +30,9 @@ class Base:
         if value < 0:
             raise ValueError("{:s} must be >= 0".format(name))
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """dict to JSON"""
+        if list_dictionaries is None:
+            return "[]"
         return json.dumps(list_dictionaries)
