@@ -27,20 +27,8 @@ class Square(Rectangle):
         """updater"""
         if kwargs is not None:
             for key, value in kwargs.items():
-                if key == "id":
-                    super().__init__(height=self.size,
-                                     width=self.size, id=value)
+                update_kwargs = kwargs.copy()
                 if key == "size":
-                    self.__size = value
-                if key == "x":
-                    self.__x = value
-                if key == "y":
-                    self.__y = value
-        if len(args) >= 1:
-            super().__init__(width=self.size, height=self.size, id=args[0])
-        if len(args) >= 2:
-            self.__size = args[1]
-        if len(args) >= 3:
-            self.__x = args[2]
-        if len(args) == 4:
-            self.__y = args[3]
+                    update_kwargs["width"] = kwargs["size"]
+                    update_kwargs["height"] = kwargs["size"]
+                super().update(**update_kwargs)
