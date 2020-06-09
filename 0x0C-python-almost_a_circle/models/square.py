@@ -25,7 +25,15 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """updater"""
-        if kwargs is not None:
+        if len(args) == 1:
+            super().update(*args)
+        if len(args) > 1:
+            update_args = []
+            update_args.append(args[0])
+            update_args.append(args[1])
+            update_args.append(args[1:])
+            super().update(*update_args)
+        elif kwargs is not None:
             for key, value in kwargs.items():
                 update_kwargs = kwargs.copy()
                 if key == "size":
