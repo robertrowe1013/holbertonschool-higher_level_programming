@@ -21,3 +21,9 @@ class TestRectangleMethods(unittest.TestCase):
             Rectangle(10, None)
         with self.assertRaises(ValueError):
             Rectangle(10, -2)
+        with self.assertRaises(TypeError):
+            Rectangle(1.4, 2)
+        with self.assertRaises(TypeError):
+            Rectangle(float('inf'), 2)
+        with self.assertRaises(TypeError):
+            Rectangle(float('nan'), 2)
