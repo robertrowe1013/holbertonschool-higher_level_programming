@@ -3,8 +3,10 @@
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangleMethods(unittest.TestCase):
     """rectangle tests"""
+
     def test_rectangle(self):
         """retangle tests"""
         r1 = Rectangle(10, 2)

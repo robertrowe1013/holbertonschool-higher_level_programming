@@ -3,6 +3,7 @@
 import unittest
 from models.base import Base
 
+
 class TestBaseMethods(unittest.TestCase):
     """base tests"""
 
