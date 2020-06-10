@@ -55,3 +55,8 @@ class TestRectangleMethods(unittest.TestCase):
             Rectangle(1, 1, 1.1)
         with self.assertRaises(TypeError):
             Rectangle(1, 1, 1, 1.1)
+
+    def test_rectangle_mods(self):
+        """mod checks"""
+        r3 = Rectangle(2, 3)
+        self.assertEqual(r3.area(), 6)
