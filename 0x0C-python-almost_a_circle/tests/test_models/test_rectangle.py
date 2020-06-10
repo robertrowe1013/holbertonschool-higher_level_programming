@@ -60,3 +60,5 @@ class TestRectangleMethods(unittest.TestCase):
         """mod checks"""
         r3 = Rectangle(2, 3)
         self.assertEqual(r3.area(), 6)
+        r3 = Rectangle(0, 4)
+        self.assertEqual(r3.area(), 0)
