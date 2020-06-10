@@ -31,3 +31,7 @@ class TestRectangleMethods(unittest.TestCase):
             Rectangle(1, 1, -1, 1, 1)
         with self.assertRaises(ValueError):
             Rectangle(1, 1, 1, -1, 1)
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, 1, 1, 1, 1)
+        with self.assertRaises(TypeError):
+            Rectangle(depth=1)
