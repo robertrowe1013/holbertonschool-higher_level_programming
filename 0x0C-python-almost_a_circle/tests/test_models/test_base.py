@@ -17,3 +17,5 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(b2.id, 2)
         self.assertEqual(b3.id, 12)
         self.assertEqual(b4.id, 3)
+        with self.assertRaises(NameError):
+            b5 = Base(x)
