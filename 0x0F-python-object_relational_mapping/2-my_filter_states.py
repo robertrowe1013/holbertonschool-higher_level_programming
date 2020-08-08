@@ -12,7 +12,8 @@ def select_states():
         db=argv[3]
     )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    sql_string = "SELECT * FROM states WHERE name='{}'".format(argv[4])
+    cur.execute(sql_string)
     rows = cur.fetchall()
     for row in rows:
         print(row)
