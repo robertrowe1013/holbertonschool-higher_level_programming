@@ -11,6 +11,15 @@ def select_states():
         passwd=argv[2],
         db=argv[3]
     )
+    cur = db.cursor()
+    cur.execute("SQL HERE")
+    rows = cur.fetchall()
+    for row in rows:
+        for col in row:
+            print "%s," % col
+        print "\n"
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
     select_states()
