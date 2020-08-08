@@ -14,7 +14,8 @@ def select_states():
         db=argv[3]
     )
     cur = db.cursor()
-    sql_string = "SELECT * FROM states WHERE name='{}'".format(argv[4])
+    sql_string = "SELECT * FROM states WHERE name \
+        LIKE BINARY '{}'".format(argv[4])
     cur.execute(sql_string)
     rows = cur.fetchall()
     for row in rows:
