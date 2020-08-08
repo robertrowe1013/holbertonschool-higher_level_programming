@@ -3,6 +3,7 @@
 import MySQLdb
 from sys import argv
 
+
 def select_states():
     """ access database print states by input """
     db = MySQLdb.connect(
