@@ -14,7 +14,9 @@ def select_cities():
         db=argv[3]
     )
     cur = db.cursor()
-    sql_string = "SELECT cities.name FROM cities INNER JOIN states ON cities.state_id = states.id WHERE states.name = %s ORDER BY cities.id"
+    sql_string = "SELECT cities.name FROM cities \
+        INNER JOIN states ON cities.state_id = states.id \
+        WHERE states.name = %s ORDER BY cities.id"
     cur.execute(sql_string, (argv[4],))
     rows = cur.fetchall()
     row_count = 0
@@ -32,4 +34,3 @@ def select_cities():
 
 if __name__ == "__main__":
     select_cities()
-
