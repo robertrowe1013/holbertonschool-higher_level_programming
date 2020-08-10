@@ -18,7 +18,7 @@ def fetch_states():
     if state:
         print("{}: {}".format(state.id, state.name))
     else:
-        print("")
+        print("Nothing")
     session.close()
 
 if __name__ == "__main__":
