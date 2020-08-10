@@ -21,14 +21,17 @@ def select_cities():
     rows = cur.fetchall()
     row_count = 0
     row_end = len(rows)
-    for row in rows:
-        city = str(row).strip("(')")
-        city = city.replace("',", "")
-        row_count += 1
-        if row_count == row_end:
-            print(city)
-        else:
-            print(city, end=", ")
+    if rows:
+        for row in rows:
+            city = str(row).strip("(')")
+            city = city.replace("',", "")
+            row_count += 1
+            if row_count == row_end:
+                print(city)
+            else:
+                print(city, end=", ")
+    else:
+        print("")
     cur.close()
     db.close()
 
