@@ -9,6 +9,6 @@ if __name__ == "__main__":
         bt = type(response.read())
         bu = bc.decode(encoding='UTF-8')
         print('Body response:')
-        print('\t- type {}'.format(bt))
+        print('\t- type: {}'.format(bt))
         print('\t- content: {}'.format(bc))
         print('\t- utf8 content: {}'.format(bu))
