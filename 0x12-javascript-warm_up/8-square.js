@@ -3,7 +3,7 @@ let myVar = 'X';
 let i;
 let i2 = 1;
 let stopPoint;
-if (process.argv[2] === undefined) {
+if (process.argv[2] === undefined || isNaN(parseInt(process.argv[2]))) {
   myVar = 'Missing size';
   stopPoint = 1;
 } else {
