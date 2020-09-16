@@ -18,9 +18,13 @@ if (process.argv[2] === undefined) {
   }
 }
 while (process.argv[i] !== undefined) {
-  if (process.argv[i] > ultimate) {
-    penultimate = ultimate;
-    ultimate = process.argv[i];
+  if (process.argv[i] > penultimate ) {
+    if (process.argv[i] > ultimate) {
+      penultimate = ultimate;
+      ultimate = process.argv[i];
+    } else if (process.argv[i] < ultimate) {
+      penultimate = process.argv[i];
+    }
   }
   i++;
 }
