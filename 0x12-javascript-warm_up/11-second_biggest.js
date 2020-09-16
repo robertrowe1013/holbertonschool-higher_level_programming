@@ -8,22 +8,22 @@ if (process.argv[2] === undefined) {
   if (process.argv[3] === undefined) {
     penultimate = 0;
   } else {
-    if (process.argv[2] > process.argv[3]) {
-      ultimate = process.argv[2];
-      penultimate = process.argv[3];
+    if (parseInt(process.argv[2]) > parseInt(process.argv[3])) {
+      ultimate = parseInt(process.argv[2]);
+      penultimate = parseInt(process.argv[3]);
     } else {
-      ultimate = process.argv[3];
-      penultimate = process.argv[2];
+      ultimate = parseInt(process.argv[3]);
+      penultimate = parseInt(process.argv[2]);
     }
   }
 }
 while (process.argv[i] !== undefined) {
-  if (process.argv[i] > penultimate ) {
-    if (process.argv[i] > ultimate) {
+  if (parseInt(process.argv[i]) > penultimate) {
+    if (parseInt(process.argv[i]) > ultimate) {
       penultimate = ultimate;
-      ultimate = process.argv[i];
-    } else if (process.argv[i] < ultimate) {
-      penultimate = process.argv[i];
+      ultimate = parseInt(process.argv[i]);
+    } else if (parseInt(process.argv[i]) < ultimate) {
+      penultimate = parseInt(process.argv[i]);
     }
   }
   i++;
