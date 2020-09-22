@@ -20,13 +20,13 @@ class Rectangle {
     }
   }
 
-  rotate() {
+  rotate () {
     temp = this.width;
     this.width = this.height;
     this.height = temp;
   }
 
-  double() {
+  double () {
     this.height *= 2;
     this.width *= 2;
   }
