@@ -9,12 +9,13 @@ class Rectangle {
       this.height = h;
     }
   }
-  print() {
+
+  print () {
     for (column = 0; column < this.height; column++) {
       for (row = 0; row < this.width; row++) {
-        process.stdout.write("X")
+        process.stdout.write('X');
       }
-      process.stdout.write("\n")
+      process.stdout.write('\n');
     }
   }
 }
