@@ -1,4 +1,5 @@
 #!/usr/bin/node
+const request = require('request');
 var https = require('https');
 
 https.get(process.argv[2], function (res) {
