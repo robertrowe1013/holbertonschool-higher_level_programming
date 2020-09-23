@@ -9,7 +9,7 @@ request(options, (err, res, body) => {
   if (err) {
     console.log(err);
   } else {
-    count = 3;
+    const count = 3;
+    console.log(count);
   }
-  console.log(count);
 });
