@@ -9,7 +9,17 @@ request(options, (err, res, body) => {
   if (err) {
     console.log(err);
   } else {
-    const count = 3;
+    let count = 0;
+    let i;
+    let j;
+    const json = JSON.parse(body);
+    for (i = 0; i < json.results.length; i++) {
+      for (j = 0; j < json.results[i].characters.length; j++) {
+        if (json.results[i].characters[j].includes('18')) {
+          count++;
+        }
+      }
+    }
     console.log(count);
   }
 });
