@@ -4,7 +4,7 @@ const newDict = {};
 let key;
 let newKey;
 for (key in dict) {
-  if (dict[key] in dict) continue;
+  if (dict[key] in newDict) continue;
   else newDict[dict[key]] = [];
 }
 for (key in dict) {
