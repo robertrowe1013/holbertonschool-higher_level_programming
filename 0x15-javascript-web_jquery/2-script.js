@@ -1,6 +1,6 @@
 #!/usr/bin/node
 $(document).ready(function () {
-  $('#red_header').click(function () {
-    $('#red_header').css('color', '#FF0000');
+  $('DIV#red_header').click(function () {
+    $('DIV#red_header').css('color', '#FF0000');
   });
 });
